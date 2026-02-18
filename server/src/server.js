@@ -13,6 +13,6 @@ app.get('/', (req, res) => {
 console.log('mongo_uri-:', ENV.MONGO_URI)
 
 app.listen(ENV.PORT, () => {
-  connectDB()
   console.log(`Server started on port: ${ENV.PORT}`)
+  connectDB()
 })
