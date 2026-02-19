@@ -6,6 +6,6 @@ export const getStreamToken = async (req, res) => {
     res.status(200).json({ token })
   } catch (error) {
     console.log('Error generating Stream token: ', error)
-    res.status(500).json({ message: 'Failed togenerate Stream token' })
+    res.status(500).json({ message: 'Failed to generate Stream token' })
   }
 }

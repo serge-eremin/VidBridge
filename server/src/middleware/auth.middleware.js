@@ -1,6 +1,6 @@
 export const protectRoute = (req, res, next) => {
   try {
-    if (!req.auth().isAuthentificated) {
+    if (!req.auth.isAuthentificated) {
       return res
         .status(401)
         .json({ message: 'Unauthorized - you must be looged in' })
@@ -8,6 +8,7 @@ export const protectRoute = (req, res, next) => {
 
     next()
   } catch (error) {
-    console.log(first)
+    console.error('Auth middleware error:', error)
+    return res.status(500).json({ message: 'Internal server error' })
   }
 }
