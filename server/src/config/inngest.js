@@ -8,7 +8,7 @@ export const inngest = new Inngest({ id: 'vid-bridge' })
 
 const syncUser = inngest.createFunction(
   { id: 'sync-user' },
-  { event: 'clerk/User.created' },
+  { event: 'clerk/user.created' },
   async ({ event }) => {
     await connectDB()
 

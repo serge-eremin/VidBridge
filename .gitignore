@@ -15,4 +15,5 @@ build/
 .idea
 .vscode/
 
+# vercel.json
 SOURCE.md
