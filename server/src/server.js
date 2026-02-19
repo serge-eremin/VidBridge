@@ -10,19 +10,18 @@ import { connectDB } from './config/db.js'
 const app = express()
 app.use(express.json())
 
-app.use(clerkMiddleware()) // req,auth will be available in the request object
+app.use(clerkMiddleware()) // req.auth will be available in the request object
 
-// Set up the "/api/inngest" (recommended) routes with the serve handler
 app.use('/api/inngest', serve({ client: inngest, functions }))
 
 app.get('/', (req, res) => {
-  res.send('Hello world!')
+  res.send('Hello world 123!')
 })
 
 const startServer = async () => {
   try {
     await connectDB()
-    if (ENV.NODE_MODE !== 'production') {
+    if (ENV.NODE_ENV !== 'production') {
       app.listen(ENV.PORT, () => {
         console.log(`Server started on port: ${ENV.PORT}`)
       })
