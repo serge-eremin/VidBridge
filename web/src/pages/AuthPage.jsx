@@ -11,7 +11,7 @@ export const AuthPage = () => {
             <img src="/logo.png" alt="VidBridge" className="brand-logo" />
             <span className="brand-name">Vid-Bridge</span>
           </div>
-          <h1 className="hero-title">Where Work Happens ✨</h1>
+          <h2 className="hero-title">Where Work Happens ✨</h2>
 
           <p className="hero-subtitle">
             Connect with your team instantly through secure, real-time
