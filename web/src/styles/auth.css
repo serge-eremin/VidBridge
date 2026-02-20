@@ -75,7 +75,7 @@
 .brand-name {
   font-size: 2.5rem;
   font-weight: 700;
-  font-family: 'Monaco', monospace;
+  font-family: "Monaco", monospace;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background: linear-gradient(45deg, #fff, #f0f0f0);
@@ -169,7 +169,7 @@
 }
 
 .cta-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -276,7 +276,7 @@
 }
 
 .auth-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -289,13 +289,13 @@
     radial-gradient(1px 1px at 195px 85px, rgba(83, 52, 131, 0.3), transparent);
   background-repeat: repeat;
   background-size: 250px 120px;
-  animation: gentleFloat 25s ease-in-out infinite;
+  animation: gentle-float 25s ease-in-out infinite;
   pointer-events: none;
   opacity: 0.6;
 }
 
 .auth-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -25%;
   left: -25%;
@@ -307,7 +307,7 @@
     transparent 1px
   );
   background-size: 80px 80px;
-  animation: subtleDrift 40s linear infinite;
+  animation: subtle-drift 40s linear infinite;
   pointer-events: none;
 }
 
@@ -322,7 +322,7 @@
   }
 }
 
-@keyframes gentleFloat {
+@keyframes gentle-float {
   0%,
   100% {
     transform: translateY(0px) translateX(0px);
@@ -338,7 +338,7 @@
   }
 }
 
-@keyframes subtleDrift {
+@keyframes subtle-drift {
   0% {
     transform: rotate(0deg) translateX(0px);
   }
