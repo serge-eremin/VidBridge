@@ -1,5 +1,5 @@
 .auth-container {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   background:
     linear-gradient(
@@ -31,6 +31,7 @@
   justify-content: center;
   padding: 3rem;
   position: relative;
+  overflow: auto;
 }
 
 .auth-right {
@@ -50,6 +51,7 @@
   padding: 3rem;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 2rem;
+  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   border: 1px solid rgba(116, 58, 213, 0.2);
   box-shadow:
@@ -57,6 +59,10 @@
     0 0 100px rgba(116, 58, 213, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
+  max-height: calc(
+    100dvh - 6rem
+  ); /* потому что у auth-left padding: 3rem сверху и снизу */
+  overflow: auto;
 }
 
 .brand-container {
@@ -85,8 +91,8 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 2.25rem;
+  font-weight: 500;
   line-height: 1.1;
   margin-bottom: 1rem;
   background: linear-gradient(45deg, #fff, #e0e0e0);
@@ -94,14 +100,16 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-top: 2rem;
+  opacity: 90%;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
   opacity: 0.9;
   color: #f8f9fa;
+  opacity: 65%;
 }
 
 .features-list {
@@ -115,9 +123,10 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   background: rgba(116, 58, 213, 0.08);
   border-radius: 1rem;
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(116, 58, 213, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -165,6 +174,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
 

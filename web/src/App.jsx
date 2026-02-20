@@ -4,11 +4,12 @@ import {
   SignInButton,
   SignUpButton,
   UserButton,
-} from '@clerk/clerk-react'
-import { Routes, Route, Navigate } from 'react-router'
+} from "@clerk/clerk-react";
+import { Routes, Route, Navigate } from "react-router";
+// import toast from "react-hot-toast";
 
-import { HomePage } from './pages/HomePage'
-import { AuthPage } from './pages/AuthPage'
+import { HomePage } from "./pages/HomePage";
+import { AuthPage } from "./pages/AuthPage";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <SignedIn>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/auth" element={<Navigate to={'/'} replace />} />
+          <Route path="/auth" element={<Navigate to={"/"} replace />} />
         </Routes>
       </SignedIn>
 
@@ -25,13 +26,13 @@ const App = () => {
       <SignedOut>
         <Routes>
           <Route path="/auth" element={<AuthPage />} />
-          <Route path="*" element={<Navigate to={'/auth'} replace />} />
+          <Route path="*" element={<Navigate to={"/auth"} replace />} />
         </Routes>
         {/* <SignInButton mode="modal" />
         <SignUpButton /> */}
       </SignedOut>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
